@@ -6,6 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.send("蜜汁小餐厅后端运行中 🚀");
+});
+
 app.post("/order", (req, res) => {
     console.log("收到订单：");
     console.log(req.body);
